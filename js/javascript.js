@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     let long,
-        lat,
-        timezone = document.querySelector('.location-timezone'),
+        lat;
+    const timezone = document.querySelector('.location-timezone'),
         temperatureSection = document.querySelector('.temperature'),
         temperatureDegree = document.querySelector('.temperature h1'),
         temperatureSpan = document.querySelector('.temperature span'),
