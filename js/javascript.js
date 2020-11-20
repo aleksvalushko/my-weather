@@ -20,7 +20,6 @@ window.addEventListener('load', () => {
                     return response.json();
                 })
                 .then(data => {
-                    console.log(data);
                     const timezoneName = data.name,
                     temperatureValue = Math.round(data.main.temp - 273.15),
                     descriptionValue = data.weather[0].description,
