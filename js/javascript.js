@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
 
-            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=f4cac63c1c37398ab9151f7d93014510`;
+            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&lang=ru&units=metric&appid=f4cac63c1c37398ab9151f7d93014510`;
 
             fetch(api)
                 .then(response => {
@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
                 })
                 .then(data => {
                     const timezoneName = data.name,
-                    temperatureValue = Math.round(data.main.temp - 273.15),
+                    temperatureValue = Math.round(data.main.temp),
                     descriptionValue = data.weather[0].description,
                     iconPath = data.weather[0].icon;
                     timezone.textContent = timezoneName;
